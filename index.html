@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Hi, I'am Student Web Designer, Programmer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #a4d069, #89b73c, #77a528);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Animasi */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e94560;
+        }
+
+        /* Header */
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #e94560;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #e94560;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            animation: pulse 2s infinite;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Kontak */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            font-size: 2em;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #e94560;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            nav ul {
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Data Pendidikan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <img src="1745498262205.jpg" alt="Profil" class="profile-img">
+            <h1>Hi, I'am Student Web Designer, Programmer</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="card">
+                <h2>Tentang Saya</h2>
+                <p>Nama saya Agus Indra Prasetya. Saya lahir di Sidoarjo pada tanggal 28 Juli 2008. Saya seorang laki-laki, beragama islam, dan saat ini berstatus belum menikah atau pelajar. Saya tinggal di desa Putat RT 10 RW02, kecamatan Tanggulangin, kabupaten Sidoarjo, Anda dapat menghubungi saya melalui nomor 08983749056.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Keahlian</h2>
+            <div class="card">
+                <div class="skills">
+                    <span class="skill-tag">Komunikatif</span>
+                    <span class="skill-tag">Kerja Tim</span>
+                    <span class="skill-tag">Kolaborasi</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Suka Tantangan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Data Pendidikan</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="card">
+                        <h3>Sekolah Dasar</h3>
+                        <p>SD AL-ISLAMIYAH</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card">
+                        <h3>Sekolah Menengah Pertama</h3>
+                        <p>SMP NEGERI 2 TANGGULANGIN</p>
+                    </div>
+		</div>
+                <div class="project-card">
+                    <div class="card">
+                        <h3>Sekolah Menengah Atas</h3>
+                        <p>SMA NEGERI 1 PORONG</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="card">
+                <h2>Hubungi Saya</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
